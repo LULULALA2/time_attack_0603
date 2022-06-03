@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>스타벅스 커피</title>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+    <p><label><input type="checkbox" name="cold_brew" value="cold_brew"> 콜드 브루 커피</label></p>
+    <p><label><input type="checkbox" name="brewed" value="brewed"> 브루드 커피</label></p>
+    <p><label><input type="checkbox" name="espresso" value="espresso"> 에스프레소</label></p>
+    <p><button type="submit">확인</button>
+</form>
+{% if {{ category.category }}%}
+    <p>{{ drink.name }}</p>
+{% endif %}
+</body>
+</html>
